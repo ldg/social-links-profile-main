@@ -1,0 +1,108 @@
+@use 'util' as u;
+
+/* css custom properties */
+:root {
+	--green: hsl(75, 94%, 57%);
+	--white: hsl(0, 0%, 100%);
+	--grey-700: hsl(0, 0%, 20%);
+	--grey-800: hsl(0, 0%, 12%);
+	--grey-900: hsl(0, 0%, 8%);
+	--fw-400: 400;
+	--fw-700: 700;
+	--space-500: 2.5rem;
+	--space-300: 1.5rem;
+	--space-200: 1rem;
+	--space-150: 0.75rem;
+	--space-100: 0.5rem;
+	--space-50: 0.25rem;
+}
+
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--grey-900);
+	font-family: 'Inter', sans-serif;
+	line-height: 1.5;
+}
+
+main.main {
+	min-height: 100vh;
+	display: grid;
+	justify-content: center;
+	justify-items: center;
+	align-content: center;
+}
+
+.soc-card {
+	background-color: var(--grey-800);
+	color: var(--white);
+	text-align: center;
+	width: u.rem(327);
+	border-radius: 12px;
+
+	&__avatar {
+		width: u.rem(88);
+		height: u.rem(88);
+		border-radius: 50%;
+		margin-top: var(--space-300);
+	}
+
+	&__name {
+		font-size: u.rem(24);
+		font-weight: var(--fw-700);
+	}
+
+	&__location {
+		font-size: u.rem(14);
+		font-weight: var(--fw-700);
+		color: var(--green);
+	}
+
+	&__bio {
+		font-size: u.rem(14);
+		font-weight: var(--fw-400);
+		margin-top: var(--space-300);
+	}
+
+	&__buttons {
+		margin-inline: var(--space-300);
+		margin-bottom: var(--space-300);
+	}
+
+	&__button {
+		width: 100%;
+		border-radius: var(--space-100);
+		font-size: u.rem(14);
+		font-weight: var(--fw-700);
+		padding-block: var(--space-150);
+		margin-top: var(--space-200);
+		background-color: var(--grey-700);
+		color: var(--white);
+		border: none;
+		transition: all 0.5s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			background-color: var(--green);
+			color: var(--grey-700);
+		}
+	}
+
+	// &__button:nth-child(1) {
+	// 	margin-top: 0;
+	// }
+}
+
+/* attribution */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
