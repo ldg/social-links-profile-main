@@ -45,6 +45,10 @@ main.main {
 	width: u.rem(327);
 	border-radius: 12px;
 
+	@media screen and (min-width: 768px) {
+		width: u.rem(384);
+	}
+
 	&__avatar {
 		width: u.rem(88);
 		height: u.rem(88);
@@ -72,6 +76,11 @@ main.main {
 	&__buttons {
 		margin-inline: var(--space-300);
 		margin-bottom: var(--space-300);
+
+		@media screen and (min-width: 768px) {
+			margin-inline: var(--space-500);
+			margin-bottom: var(--space-500);
+		}
 	}
 
 	&__button {
